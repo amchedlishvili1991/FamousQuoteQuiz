@@ -1,0 +1,8 @@
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.deps.json
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.csprojAssemblyReference.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.AssemblyInfoInputs.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.AssemblyInfo.cs
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.pdb

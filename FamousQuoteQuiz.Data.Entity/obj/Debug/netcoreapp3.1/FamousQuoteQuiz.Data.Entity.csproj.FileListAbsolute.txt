@@ -1,0 +1,11 @@
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.deps.json
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.csprojAssemblyReference.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.AssemblyInfoInputs.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.AssemblyInfo.cs
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.csproj.CopyComplete
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.pdb

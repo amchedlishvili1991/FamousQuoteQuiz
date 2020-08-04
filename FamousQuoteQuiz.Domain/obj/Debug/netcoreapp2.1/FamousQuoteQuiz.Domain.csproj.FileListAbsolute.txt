@@ -1,0 +1,13 @@
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.deps.json
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.Entity.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.Entity.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\bin\Debug\netcoreapp2.1\FamousQuoteQuiz.Data.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.csprojAssemblyReference.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.AssemblyInfoInputs.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.AssemblyInfo.cs
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.csproj.CopyComplete
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp2.1\FamousQuoteQuiz.Domain.pdb

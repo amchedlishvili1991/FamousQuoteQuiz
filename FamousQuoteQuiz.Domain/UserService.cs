@@ -22,22 +22,22 @@ namespace FamousQuoteQuiz.Domain
         /// <summary>
         /// user repository
         /// </summary>
-        private readonly IRepository<User> user;
+        private readonly IRepository<User, Data.RepositoryModels.User> user;
 
         /// <summary>
         /// user role repository
         /// </summary>
-        private readonly IRepository<UserAnsweredQuote> userAnsweredQoute;
+        private readonly IRepository<UserAnsweredQuote, Data.RepositoryModels.UserAnsweredQuote> userAnsweredQoute;
 
         /// <summary>
         /// quote
         /// </summary>
-        private readonly IRepository<Quote> quote;
+        private readonly IRepository<Quote, Data.RepositoryModels.Quote> quote;
 
         /// <summary>
         /// quote answer
         /// </summary>
-        private readonly IRepository<QuoteAnswer> quoteAnswer;
+        private readonly IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer;
 
         /// <summary>
         /// base database context
@@ -60,10 +60,10 @@ namespace FamousQuoteQuiz.Domain
         /// <param name="userRole"></param>
         /// <param name="dbContext"></param>
         /// <param name="configuration"></param>
-        public UserService(IRepository<User> user,
-            IRepository<UserAnsweredQuote> userAnsweredQoute,
-            IRepository<Quote> quote,
-            IRepository<QuoteAnswer> quoteAnswer,
+        public UserService(IRepository<User, Data.RepositoryModels.User> user,
+            IRepository<UserAnsweredQuote, Data.RepositoryModels.UserAnsweredQuote> userAnsweredQoute,
+            IRepository<Quote, Data.RepositoryModels.Quote> quote,
+            IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer,
             BaseDbContext dbContext,
             IConfiguration configuration)
         {

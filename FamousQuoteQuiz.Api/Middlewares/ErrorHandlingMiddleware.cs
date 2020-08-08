@@ -37,7 +37,7 @@ namespace FamousQuoteQuiz.Api.Middlewares
             {
                 await _next(context);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // do logging
                 var response = new Response<ActionResult>(false, null, null, new string[] { FqqExceptionCode.GeneralError.GetEnumDescription() });

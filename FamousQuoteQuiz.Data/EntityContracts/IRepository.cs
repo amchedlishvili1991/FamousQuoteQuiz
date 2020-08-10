@@ -86,5 +86,9 @@ namespace FamousQuoteQuiz.Data.EntityContracts
         Task Update(T2 repositoryModel);
 
         IQueryable<T1> GetDbSet();
+
+        void SaveChanges();
+
+        Task SaveChangesAsync();
     }
 }

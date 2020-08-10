@@ -256,7 +256,7 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
                 var key = entity.GetType().GetProperties().Single(x => x.Name == "Id");
                 var dbEntity = await DbSet.FindAsync(key.GetValue(entity));
 
-                var entityProperties = entity.GetType().GetProperties().Where(x => x.Name != "Id" && x.PropertyType.IsValueType);
+                var entityProperties = entity.GetType().GetProperties().Where(x => x.Name != "Id" && (x.PropertyType.IsValueType || x.PropertyType == typeof(string)));
 
                 foreach (var item in entityProperties)
                 {
@@ -265,6 +265,8 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
 
                     singleDbEntityFiled.SetValue(dbEntity, singleEntityFiled.GetValue(entity));
                 }
+
+                DbContext.Entry(dbEntity).State = EntityState.Modified;
             }
             catch (InvalidOperationException iox)
             {
@@ -275,6 +277,16 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
         public IQueryable<T1> GetDbSet()
         {
             return DbSet;
+        }
+
+        public void SaveChanges()
+        {
+            DbContext.SaveChanges();
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await DbContext.SaveChangesAsync();
         }
     }
 }

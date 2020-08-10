@@ -40,11 +40,6 @@ namespace FamousQuoteQuiz.Domain
         private readonly IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer;
 
         /// <summary>
-        /// base database context
-        /// </summary>
-        private readonly BaseDbContext dbContext;
-
-        /// <summary>
         /// configuration
         /// </summary>
         private readonly IConfiguration configuration;
@@ -64,14 +59,12 @@ namespace FamousQuoteQuiz.Domain
             IRepository<UserAnsweredQuote, Data.RepositoryModels.UserAnsweredQuote> userAnsweredQoute,
             IRepository<Quote, Data.RepositoryModels.Quote> quote,
             IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer,
-            BaseDbContext dbContext,
             IConfiguration configuration)
         {
             this.user = user;
             this.userAnsweredQoute = userAnsweredQoute;
             this.quote = quote;
             this.quoteAnswer = quoteAnswer;
-            this.dbContext = dbContext;
             this.configuration = configuration;
         }
 
@@ -102,7 +95,7 @@ namespace FamousQuoteQuiz.Domain
             };
 
             await user.AddAsync(dbUser);
-            await dbContext.SaveChangesAsync();
+            await user.SaveChangesAsync();
         }
 
         /// <summary>
@@ -117,7 +110,8 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && x.IsActive && !x.IsDeleted);
                 dbUser.Password = EncriptPassword(userModel.Password);
 
-                await dbContext.SaveChangesAsync();
+                await user.Update(dbUser);
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {
@@ -137,7 +131,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && x.IsActive && !x.IsDeleted);
                 dbUser.IsActive = false;
 
-                await dbContext.SaveChangesAsync();
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {
@@ -161,7 +155,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && !x.IsDeleted);
                 dbUser.IsDeleted = true;
 
-                await dbContext.SaveChangesAsync();
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {
@@ -254,7 +248,7 @@ namespace FamousQuoteQuiz.Domain
                 };
 
                 await userAnsweredQoute.AddAsync(dbModel);
-                await dbContext.SaveChangesAsync();
+                await userAnsweredQoute.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -316,7 +310,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.UserName == userName && x.IsActive && !x.IsDeleted);
                 dbUser.Mode = (byte)mode;
 
-                await dbContext.SaveChangesAsync();
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {

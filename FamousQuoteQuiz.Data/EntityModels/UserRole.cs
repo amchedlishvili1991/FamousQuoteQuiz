@@ -7,6 +7,7 @@ namespace FamousQuoteQuiz.Data.EntityModels
     [Table("UserRole", Schema = "dbo")]
     public class UserRole
     {
+        public static ServiceModels.Enums.UserRole User { get; set; }
         [Key]
         public int Id { get; set; }
 

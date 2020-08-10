@@ -292,3 +292,4 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcore
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll

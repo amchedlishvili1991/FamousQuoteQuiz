@@ -22,27 +22,22 @@ namespace FamousQuoteQuiz.Domain
         /// <summary>
         /// user repository
         /// </summary>
-        private readonly IRepository<User> user;
+        private readonly IRepository<User, Data.RepositoryModels.User> user;
 
         /// <summary>
         /// user role repository
         /// </summary>
-        private readonly IRepository<UserAnsweredQuote> userAnsweredQoute;
+        private readonly IRepository<UserAnsweredQuote, Data.RepositoryModels.UserAnsweredQuote> userAnsweredQoute;
 
         /// <summary>
         /// quote
         /// </summary>
-        private readonly IRepository<Quote> quote;
+        private readonly IRepository<Quote, Data.RepositoryModels.Quote> quote;
 
         /// <summary>
         /// quote answer
         /// </summary>
-        private readonly IRepository<QuoteAnswer> quoteAnswer;
-
-        /// <summary>
-        /// base database context
-        /// </summary>
-        private readonly BaseDbContext dbContext;
+        private readonly IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer;
 
         /// <summary>
         /// configuration
@@ -60,18 +55,16 @@ namespace FamousQuoteQuiz.Domain
         /// <param name="userRole"></param>
         /// <param name="dbContext"></param>
         /// <param name="configuration"></param>
-        public UserService(IRepository<User> user,
-            IRepository<UserAnsweredQuote> userAnsweredQoute,
-            IRepository<Quote> quote,
-            IRepository<QuoteAnswer> quoteAnswer,
-            BaseDbContext dbContext,
+        public UserService(IRepository<User, Data.RepositoryModels.User> user,
+            IRepository<UserAnsweredQuote, Data.RepositoryModels.UserAnsweredQuote> userAnsweredQoute,
+            IRepository<Quote, Data.RepositoryModels.Quote> quote,
+            IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer,
             IConfiguration configuration)
         {
             this.user = user;
             this.userAnsweredQoute = userAnsweredQoute;
             this.quote = quote;
             this.quoteAnswer = quoteAnswer;
-            this.dbContext = dbContext;
             this.configuration = configuration;
         }
 
@@ -102,7 +95,7 @@ namespace FamousQuoteQuiz.Domain
             };
 
             await user.AddAsync(dbUser);
-            await dbContext.SaveChangesAsync();
+            await user.SaveChangesAsync();
         }
 
         /// <summary>
@@ -117,7 +110,8 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && x.IsActive && !x.IsDeleted);
                 dbUser.Password = EncriptPassword(userModel.Password);
 
-                await dbContext.SaveChangesAsync();
+                await user.Update(dbUser);
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {
@@ -137,7 +131,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && x.IsActive && !x.IsDeleted);
                 dbUser.IsActive = false;
 
-                await dbContext.SaveChangesAsync();
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {
@@ -161,7 +155,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && !x.IsDeleted);
                 dbUser.IsDeleted = true;
 
-                await dbContext.SaveChangesAsync();
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {
@@ -254,7 +248,7 @@ namespace FamousQuoteQuiz.Domain
                 };
 
                 await userAnsweredQoute.AddAsync(dbModel);
-                await dbContext.SaveChangesAsync();
+                await userAnsweredQoute.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -316,7 +310,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.UserName == userName && x.IsActive && !x.IsDeleted);
                 dbUser.Mode = (byte)mode;
 
-                await dbContext.SaveChangesAsync();
+                await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
             {

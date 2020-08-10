@@ -6,75 +6,89 @@ using System.Threading.Tasks;
 
 namespace FamousQuoteQuiz.Data.EntityContracts
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T1, T2>
+        where T1 : class
+        where T2 : class
     {
-        IQueryable<T> GetAll();
+        IQueryable<T2> GetAll();
 
-        IQueryable<T> Where(Expression<Func<T, bool>> predicate);
+        IQueryable<T2> Where(Expression<Func<T1, bool>> predicate);
 
         int Count();
         
         Task<int> CountAsync();
 
-        int Count(Expression<Func<T, bool>> predicate);
+        int Count(Expression<Func<T1, bool>> predicate);
 
-        Task<int> CountAsync(Expression<Func<T, bool>> predicate);
+        Task<int> CountAsync(Expression<Func<T1, bool>> predicate);
 
         bool Any();
 
         Task<bool> AnyAsync();
 
-        Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
+        Task<bool> AnyAsync(Expression<Func<T1, bool>> predicate);
 
-        bool Any(Expression<Func<T, bool>> predicate);
-
-
-        T FirstOrDefault();
-
-        T FirstOrDefault(Expression<Func<T, bool>> predicate);
-
-        Task<T> FirstOrDefaultAsync();
-
-        Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate);
+        bool Any(Expression<Func<T1, bool>> predicate);
 
 
-        T First();
+        T2 FirstOrDefault();
 
-        T First(Expression<Func<T, bool>> predicate);
+        T2 FirstOrDefault(Expression<Func<T1, bool>> predicate);
 
-        Task<T> FirstAsync();
+        Task<T2> FirstOrDefaultAsync();
 
-        Task<T> FirstAsync(Expression<Func<T, bool>> predicate);
-
-
-        T SingleOrDefault();
-
-        T SingleOrDefault(Expression<Func<T, bool>> predicate);
-
-        Task<T> SingleOrDefaultAsync();
-
-        Task<T> SingleOrDefaultAsync(Expression<Func<T, bool>> predicate);
+        Task<T2> FirstOrDefaultAsync(Expression<Func<T1, bool>> predicate);
 
 
-        T Single();
+        T2 First();
 
-        T Single(Expression<Func<T, bool>> predicate);
+        T2 First(Expression<Func<T1, bool>> predicate);
 
-        Task<T> SingleAsync();
+        Task<T2> FirstAsync();
 
-        Task<T> SingleAsync(Expression<Func<T, bool>> predicate);
+        Task<T2> FirstAsync(Expression<Func<T1, bool>> predicate);
 
 
-        void Add(T entity);
+        T2 SingleOrDefault();
 
-        Task AddAsync(T entity);
+        T2 SingleOrDefault(Expression<Func<T1, bool>> predicate);
 
-        void AddRange(T[] entity);
+        Task<T2> SingleOrDefaultAsync();
 
-        Task AddRangeAsync(T[] entity);
+        Task<T2> SingleOrDefaultAsync(Expression<Func<T1, bool>> predicate);
+
+
+        T2 Single();
+
+        T2 Single(Expression<Func<T1, bool>> predicate);
+
+        Task<T2> SingleAsync();
+
+        Task<T2> SingleAsync(Expression<Func<T1, bool>> predicate);
+
+
+        void Add(T1 entity);
+
+        Task AddAsync(T1 entity);
+
+        void AddRange(T1[] entity);
+
+        Task AddRangeAsync(T1[] entity);
 
         void Remove(int Id);
 
-        void Remove(T entity);
+        void Remove(T1 entity);
+
+        List<T2> ToList(IQueryable<T1> queryable);
+
+        T2[] ToArray(IQueryable<T1> queryable);
+
+        Task Update(T2 repositoryModel);
+
+        IQueryable<T1> GetDbSet();
+
+        void SaveChanges();
+
+        Task SaveChangesAsync();
     }
 }

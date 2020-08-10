@@ -26,6 +26,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using FamousQuoteQuiz.Api.Helpers;
 
 namespace FamousQuoteQuiz.Api
 {
@@ -43,17 +44,17 @@ namespace FamousQuoteQuiz.Api
         {
             services.AddControllers();
 
-            var mvcBuilder = services.AddMvc(options =>
-            {
-                // Force authorization by default.
-                var policy = new AuthorizationPolicyBuilder()
-                    .RequireAuthenticatedUser()
-                    .Build();
+            //var mvcBuilder = services.AddMvc(options =>
+            //{
+            //    // Force authorization by default.
+            //    var policy = new AuthorizationPolicyBuilder()
+            //        .RequireAuthenticatedUser()
+            //        .Build();
 
-                options.Filters.Add(new AuthorizeFilter(policy));
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            //    options.Filters.Add(new AuthorizeFilter(policy));
+            //}).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            mvcBuilder.AddControllersAsServices();
+            //mvcBuilder.AddControllersAsServices();
 
             services.AddSwaggerGen(x =>
             {
@@ -62,11 +63,11 @@ namespace FamousQuoteQuiz.Api
                     Version = "v1",
                     Title = "Fqq Api V1"
                 });
-                x.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
-                {
-                    Version = "v2",
-                    Title = "Fqq Api V2"
-                });
+                //x.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
+                //{
+                //    Version = "v2",
+                //    Title = "Fqq Api V2"
+                //});
             });
 
             services.AddApiVersioning(x =>
@@ -77,31 +78,24 @@ namespace FamousQuoteQuiz.Api
             });
 
             services.AddMvcCore()
-                .AddAuthorization(options =>
-                {
-                    options.AddPolicy("PermissionsPolicy", policy => policy.Requirements.Add(new PermissionRequirement()));
-                });
+                //.AddAuthorization(options =>
+                //{
+                //    options.AddPolicy("PermissionsPolicy", policy => policy.Requirements.Add(new PermissionRequirement()));
+                //})
+                ;
 
-            services.AddAuthentication("Bearer")
-                .AddIdentityServerAuthentication(options =>
-                {
-                    options.Authority = "http://localhost:33235";
-                    options.ApiName = "Api Auth";
-                });
+            //services.AddAuthentication("Bearer")
+            //    .AddIdentityServerAuthentication(options =>
+            //    {
+            //        options.Authority = "http://localhost:33235";
+            //        options.ApiName = "Api Auth";
+            //    });
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IQuoteService, QuoteService>();
 
-            services.AddScoped<IValidator<UserModel>, UserModelValidator>();
-            services.AddScoped<IValidator<UpdateUserModel>, UpdateUserModelValidator>();
-            services.AddScoped<IValidator<QuoteModel>, QuoteModelValidator>();
-            services.AddScoped<IValidator<UserAnsweredQuiz>, UserAnsweredQuizValidator>();
-
-            services.AddScoped<IRepository<User>, Repository<User>>();
-            services.AddScoped<IRepository<UserRole>, Repository<UserRole>>();
-            services.AddScoped<IRepository<Quote>, Repository<Quote>>();
-            services.AddScoped<IRepository<QuoteAnswer>, Repository<QuoteAnswer>>();
-            services.AddScoped<IRepository<UserAnsweredQuote>, Repository<UserAnsweredQuote>>();
+            services.RegisterValidators();
+            services.RegisterRepositories();
 
             services.AddDbContext<BaseDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("FamousQuoteQuizContext")));
         }
@@ -123,8 +117,8 @@ namespace FamousQuoteQuiz.Api
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseRouting();
-            app.UseAuthentication();
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

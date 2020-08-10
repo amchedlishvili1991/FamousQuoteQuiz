@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace FamousQuoteQuiz.Domain
@@ -20,12 +21,12 @@ namespace FamousQuoteQuiz.Domain
         /// <summary>
         /// quote repository
         /// </summary>
-        private readonly IRepository<Quote> quote;
+        private readonly IRepository<Quote, Data.RepositoryModels.Quote> quote;
 
         /// <summary>
         /// quoteAnswer repository
         /// </summary>
-        private readonly IRepository<QuoteAnswer> quoteAnswer;
+        private readonly IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer;
 
         /// <summary>
         /// base database context
@@ -41,9 +42,9 @@ namespace FamousQuoteQuiz.Domain
         /// </summary>
         /// <param name="quote"></param>
         /// <param name="dbContext"></param>
-        public QuoteService(IRepository<Quote> quote,
+        public QuoteService(IRepository<Quote, Data.RepositoryModels.Quote> quote,
             BaseDbContext dbContext,
-            IRepository<QuoteAnswer> quoteAnswer)
+            IRepository<QuoteAnswer, Data.RepositoryModels.QuoteAnswer> quoteAnswer)
         {
             this.quote = quote;
             this.dbContext = dbContext;
@@ -94,12 +95,17 @@ namespace FamousQuoteQuiz.Domain
         {
             try
             {
-                var dbQuote = await quote.GetAll().Include(X => X.QuoteAnswers).SingleAsync(x => x.Id == quoteModel.Id);
-                dbQuote.Text = quoteModel.Text;
-                dbQuote.Mode = (byte)quoteModel.Mode;
-                dbQuote.Correct = quoteModel.Correct == null ? (bool?)null : quoteModel.Correct == BinaryType.Yes;
+                var quoteRepoModel = new Data.RepositoryModels.Quote
+                {
+                    Id = quoteModel.Id,
+                    Correct = quoteModel.Correct == null ? (bool?)null : quoteModel.Correct == BinaryType.Yes,
+                    Mode = (byte)quoteModel.Mode,
+                    Text = quoteModel.Text,
+                };
 
-                var dbAnswers = dbQuote.QuoteAnswers;
+                await quote.Update(quoteRepoModel);
+
+                var dbAnswers = quoteAnswer.Where(x => x.QuoteId == quoteModel.Id);
 
                 if (dbAnswers != null)
                 {
@@ -138,17 +144,17 @@ namespace FamousQuoteQuiz.Domain
         {
             try
             {
-                var dbQuote = await quote.GetAll().Include(X => X.QuoteAnswers).SingleAsync(x => x.Id == quoteModel.Id);
+                var quoteAnswers = quoteAnswer.Where(x => x.QuoteId == quoteModel.Id);
 
-                if (dbQuote.QuoteAnswers != null)
+                if (quoteAnswers != null)
                 {
-                    foreach (var item in dbQuote.QuoteAnswers)
+                    foreach (var item in quoteAnswers)
                     {
                         quoteAnswer.Remove(item.Id);
                     }
                 }
 
-                quote.Remove(dbQuote.Id);
+                quote.Remove(quoteModel.Id);
                 await dbContext.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
@@ -168,7 +174,7 @@ namespace FamousQuoteQuiz.Domain
         /// <returns></returns>
         public Data.ServiceModels.Quote[] GetQuotes(int currentPage, int pageSize, QuoteMode? mode)
         {
-            var result = quote.Where(x => mode == null || x.Mode == (int)mode)
+            var result = quote.GetDbSet().Where(x => mode == null || x.Mode == (int)mode)
                 .OrderBy(x => x.Id)
                 .Skip(currentPage * pageSize).Take(pageSize)
                 .Include(x => x.QuoteAnswers)

@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FamousQuoteQuiz.Data\FamousQuoteQuiz.Data.csproj" />
-    <ProjectReference Include="..\FamousQuoteQuiz.Domain\FamousQuoteQuiz.Domain.csproj" />
+    <ProjectReference Include="..\FamousQuoteQuiz.Domain\FamousQuoteQuiz.Application.csproj" />
   </ItemGroup>
 
 

@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29512.175
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{67C30ADC-D484-4235-A610-1A0ED96F1BDE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{631D6B5A-4B2F-42FD-BAE7-22B27E08A0D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{631D6B5A-4B2F-42FD-BAE7-22B27E08A0D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FamousQuoteQuiz.Domain", "FamousQuoteQuiz.Domain\FamousQuoteQuiz.Domain.csproj", "{E9B51EB8-6661-4B7D-A2F5-6715A3F51685}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FamousQuoteQuiz.Application", "FamousQuoteQuiz.Domain\FamousQuoteQuiz.Application.csproj", "{E9B51EB8-6661-4B7D-A2F5-6715A3F51685}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{736B02AB-3999-4A54-9340-C8CF1E4BC11B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{736B02AB-3999-4A54-9340-C8CF1E4BC11B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FamousQuoteQuiz.Data", "FamousQuoteQuiz.Data\FamousQuoteQuiz.Data.csproj", "{4877F152-FA34-491E-A88A-CBAB25C40353}"
 EndProject

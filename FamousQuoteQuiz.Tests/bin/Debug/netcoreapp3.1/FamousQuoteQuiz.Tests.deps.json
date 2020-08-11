@@ -1223,15 +1223,6 @@
         "runtime": {
           "FamousQuoteQuiz.Data.Entity.dll": {}
         }
-      },
-      "FamousQuoteQuiz.Domain/1.0.0": {
-        "dependencies": {
-          "FamousQuoteQuiz.Data": "1.0.0",
-          "FamousQuoteQuiz.Data.Entity": "1.0.0"
-        },
-        "runtime": {
-          "FamousQuoteQuiz.Domain.dll": {}
-        }
       }
     }
   },
@@ -1905,11 +1896,6 @@
       "sha512": ""
     },
     "FamousQuoteQuiz.Data.Entity/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "FamousQuoteQuiz.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

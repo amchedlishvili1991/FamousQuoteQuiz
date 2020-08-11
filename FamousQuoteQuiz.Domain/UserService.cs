@@ -13,7 +13,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FamousQuoteQuiz.Domain
+namespace FamousQuoteQuiz.Application
 {
     public class UserService : IUserService
     {

@@ -14,7 +14,7 @@ using FamousQuoteQuiz.Data.Entity.Repositories;
 using FamousQuoteQuiz.Data.EntityContracts;
 using FamousQuoteQuiz.Data.EntityModels;
 using FamousQuoteQuiz.Data.ServiceContracts;
-using FamousQuoteQuiz.Domain;
+using FamousQuoteQuiz.Application;
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;

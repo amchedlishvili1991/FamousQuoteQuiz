@@ -271,9 +271,7 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcore
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.dll
-C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Domain.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.pdb
-C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Domain.pdb
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.pdb
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.csprojAssemblyReference.cache
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\staticwebassets\FamousQuoteQuiz.Api.StaticWebAssets.Manifest.cache
@@ -293,3 +291,5 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcore
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.pdb

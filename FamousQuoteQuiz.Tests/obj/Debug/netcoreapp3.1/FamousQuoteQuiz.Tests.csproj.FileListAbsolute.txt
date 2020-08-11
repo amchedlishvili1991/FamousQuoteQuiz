@@ -113,9 +113,9 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netco
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.dll
-C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Domain.dll
-C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Domain.pdb
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.pdb
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Tests.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Tests.pdb
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.pdb

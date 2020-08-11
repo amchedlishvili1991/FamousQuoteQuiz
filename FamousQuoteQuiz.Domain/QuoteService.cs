@@ -12,7 +12,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
-namespace FamousQuoteQuiz.Domain
+namespace FamousQuoteQuiz.Application
 {
     public class QuoteService : IQuoteService
     {

@@ -2386,18 +2386,6 @@
           "FamousQuoteQuiz.Data.Entity.dll": {}
         }
       },
-      "FamousQuoteQuiz.Domain/1.0.0": {
-        "dependencies": {
-          "FamousQuoteQuiz.Data": "1.0.0",
-          "FamousQuoteQuiz.Data.Entity": "1.0.0"
-        },
-        "runtime": {
-          "FamousQuoteQuiz.Domain.dll": {}
-        },
-        "compile": {
-          "FamousQuoteQuiz.Domain.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -4005,6 +3993,13 @@
           "WindowsBase.dll": {}
         },
         "compileOnly": true
+      },
+      "FamousQuoteQuiz.Domain/1.0.0": {
+        "dependencies": {
+          "FamousQuoteQuiz.Data": "1.0.0",
+          "FamousQuoteQuiz.Data.Entity": "1.0.0"
+        },
+        "compileOnly": true
       }
     }
   },
@@ -5224,11 +5219,6 @@
       "sha512": ""
     },
     "FamousQuoteQuiz.Data.Entity/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "FamousQuoteQuiz.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -6570,6 +6560,11 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FamousQuoteQuiz.Domain/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

@@ -6,7 +6,7 @@ using FamousQuoteQuiz.Data.EntityContracts;
 using FamousQuoteQuiz.Data.EntityModels;
 using FamousQuoteQuiz.Data.Global;
 using FamousQuoteQuiz.Data.ServiceContracts;
-using FamousQuoteQuiz.Domain;
+using FamousQuoteQuiz.Application;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;

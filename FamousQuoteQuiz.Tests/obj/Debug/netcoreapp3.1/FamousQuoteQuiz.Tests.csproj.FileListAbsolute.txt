@@ -119,3 +119,8 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\obj\Debug\netco
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll

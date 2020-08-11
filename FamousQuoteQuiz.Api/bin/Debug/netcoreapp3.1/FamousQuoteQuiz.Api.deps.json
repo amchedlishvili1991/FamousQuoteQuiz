@@ -24,8 +24,8 @@
     ".NETCoreApp,Version=v3.1": {
       "FamousQuoteQuiz.Api/1.0.0": {
         "dependencies": {
+          "FamousQuoteQuiz.Application": "1.0.0",
           "FamousQuoteQuiz.Data": "1.0.0",
-          "FamousQuoteQuiz.Domain": "1.0.0",
           "FluentValidation.AspNetCore": "9.0.1",
           "IdentityServer4.AccessTokenValidation": "3.0.1",
           "Microsoft.AspNetCore.Mvc.Versioning": "4.1.1",
@@ -2365,6 +2365,18 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "FamousQuoteQuiz.Application/1.0.0": {
+        "dependencies": {
+          "FamousQuoteQuiz.Data": "1.0.0",
+          "FamousQuoteQuiz.Data.Entity": "1.0.0"
+        },
+        "runtime": {
+          "FamousQuoteQuiz.Application.dll": {}
+        },
+        "compile": {
+          "FamousQuoteQuiz.Application.dll": {}
+        }
+      },
       "FamousQuoteQuiz.Data/1.0.0": {
         "runtime": {
           "FamousQuoteQuiz.Data.dll": {}
@@ -3993,13 +4005,6 @@
           "WindowsBase.dll": {}
         },
         "compileOnly": true
-      },
-      "FamousQuoteQuiz.Domain/1.0.0": {
-        "dependencies": {
-          "FamousQuoteQuiz.Data": "1.0.0",
-          "FamousQuoteQuiz.Data.Entity": "1.0.0"
-        },
-        "compileOnly": true
       }
     }
   },
@@ -5212,6 +5217,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "FamousQuoteQuiz.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "FamousQuoteQuiz.Data/1.0.0": {
       "type": "project",
@@ -6560,11 +6570,6 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "FamousQuoteQuiz.Domain/1.0.0": {
-      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

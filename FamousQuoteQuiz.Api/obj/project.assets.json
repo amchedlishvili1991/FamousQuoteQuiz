@@ -2732,6 +2732,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "FamousQuoteQuiz.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "FamousQuoteQuiz.Data": "1.0.0",
+          "FamousQuoteQuiz.Data.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FamousQuoteQuiz.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FamousQuoteQuiz.Application.dll": {}
+        }
+      },
       "FamousQuoteQuiz.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2755,20 +2769,6 @@
         },
         "runtime": {
           "bin/placeholder/FamousQuoteQuiz.Data.Entity.dll": {}
-        }
-      },
-      "FamousQuoteQuiz.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "FamousQuoteQuiz.Data": "1.0.0",
-          "FamousQuoteQuiz.Data.Entity": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/FamousQuoteQuiz.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FamousQuoteQuiz.Domain.dll": {}
         }
       }
     }
@@ -8823,6 +8823,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "FamousQuoteQuiz.Application/1.0.0": {
+      "type": "project",
+      "path": "../FamousQuoteQuiz.Domain/FamousQuoteQuiz.Application.csproj",
+      "msbuildProject": "../FamousQuoteQuiz.Domain/FamousQuoteQuiz.Application.csproj"
+    },
     "FamousQuoteQuiz.Data/1.0.0": {
       "type": "project",
       "path": "../FamousQuoteQuiz.Data/FamousQuoteQuiz.Data.csproj",
@@ -8832,17 +8837,12 @@
       "type": "project",
       "path": "../FamousQuoteQuiz.Data.Entity/FamousQuoteQuiz.Data.Entity.csproj",
       "msbuildProject": "../FamousQuoteQuiz.Data.Entity/FamousQuoteQuiz.Data.Entity.csproj"
-    },
-    "FamousQuoteQuiz.Domain/1.0.0": {
-      "type": "project",
-      "path": "../FamousQuoteQuiz.Domain/FamousQuoteQuiz.Domain.csproj",
-      "msbuildProject": "../FamousQuoteQuiz.Domain/FamousQuoteQuiz.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "FamousQuoteQuiz.Application >= 1.0.0",
       "FamousQuoteQuiz.Data >= 1.0.0",
-      "FamousQuoteQuiz.Domain >= 1.0.0",
       "FluentValidation.AspNetCore >= 9.0.1",
       "IdentityServer4.AccessTokenValidation >= 3.0.1",
       "Microsoft.AspNetCore.Mvc.Versioning >= 4.1.1",
@@ -8886,8 +8886,8 @@
             "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Data\\FamousQuoteQuiz.Data.csproj": {
               "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Data\\FamousQuoteQuiz.Data.csproj"
             },
-            "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj": {
-              "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj"
+            "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj": {
+              "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj"
             }
           }
         }

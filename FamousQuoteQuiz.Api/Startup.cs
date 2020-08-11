@@ -63,11 +63,6 @@ namespace FamousQuoteQuiz.Api
                     Version = "v1",
                     Title = "Fqq Api V1"
                 });
-                //x.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
-                //{
-                //    Version = "v2",
-                //    Title = "Fqq Api V2"
-                //});
             });
 
             services.AddApiVersioning(x =>

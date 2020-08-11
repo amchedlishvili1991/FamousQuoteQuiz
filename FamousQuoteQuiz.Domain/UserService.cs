@@ -312,6 +312,7 @@ namespace FamousQuoteQuiz.Application
                 var dbUser = await user.SingleAsync(x => x.UserName == userName && x.IsActive && !x.IsDeleted);
                 dbUser.Mode = (byte)mode;
 
+                await user.Update(dbUser);
                 await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)

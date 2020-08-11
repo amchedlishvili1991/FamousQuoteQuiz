@@ -128,12 +128,12 @@
         }
       }
     },
-    "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj": {
+    "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj",
-        "projectName": "FamousQuoteQuiz.Domain",
-        "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj",
+        "projectName": "FamousQuoteQuiz.Application",
+        "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj",
         "packagesPath": "C:\\Users\\Achi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -219,8 +219,8 @@
               "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Data\\FamousQuoteQuiz.Data.csproj": {
                 "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Data\\FamousQuoteQuiz.Data.csproj"
               },
-              "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj": {
-                "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Domain.csproj"
+              "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj": {
+                "projectPath": "C:\\Users\\Achi\\source\\repos\\FamousQuoteQuiz\\FamousQuoteQuiz.Domain\\FamousQuoteQuiz.Application.csproj"
               }
             }
           }
@@ -237,6 +237,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.7, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

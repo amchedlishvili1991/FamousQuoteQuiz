@@ -131,6 +131,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && x.IsActive && !x.IsDeleted);
                 dbUser.IsActive = false;
 
+                await user.Update(dbUser);
                 await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)
@@ -155,6 +156,7 @@ namespace FamousQuoteQuiz.Domain
                 var dbUser = await user.SingleAsync(x => x.Id == userModel.Id && !x.IsDeleted);
                 dbUser.IsDeleted = true;
 
+                await user.Update(dbUser);
                 await user.SaveChangesAsync();
             }
             catch (InvalidOperationException iox)

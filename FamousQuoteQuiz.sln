@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29512.175
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{67C30ADC-D484-4235-A610-1A0ED96F1BDE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{67C30ADC-D484-4235-A610-1A0ED96F1BDE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{631D6B5A-4B2F-42FD-BAE7-22B27E08A0D5}"
 EndProject
@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FamousQuoteQuiz.Api", "Famo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A0854D03-C88D-4707-A9EA-3344D702B6BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamousQuoteQuiz.Tests", "FamousQuoteQuiz.Tests\FamousQuoteQuiz.Tests.csproj", "{33097688-9613-45EB-A0A2-2D02E824CF44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FamousQuoteQuiz.Tests", "FamousQuoteQuiz.Tests\FamousQuoteQuiz.Tests.csproj", "{33097688-9613-45EB-A0A2-2D02E824CF44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

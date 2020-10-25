@@ -83,7 +83,7 @@ namespace FamousQuoteQuiz.Tests
         [Test]
         public void CreateUser_ExistingUserName_ThrowsException()
         {
-            mockUser.Setup(x => x.AnyAsync(It.IsAny<Expression<Func<User, bool>>>())).ReturnsAsync(true);
+            mockUser.Setup(x => x.AnyAsync(It.IsAny<Expression<Func<Data.RepositoryModels.User, bool>>>())).ReturnsAsync(true);
             userMockService = new UserService(mockUser.Object, null, null, null, null);
 
             var user = new Data.ServiceModels.User

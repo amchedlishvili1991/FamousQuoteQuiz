@@ -6,3 +6,4 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcor
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.AssemblyInfo.cs
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.csproj.CoreCompileInputs.cache

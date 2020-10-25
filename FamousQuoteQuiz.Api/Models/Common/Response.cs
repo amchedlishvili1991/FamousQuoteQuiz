@@ -2,6 +2,10 @@
 
 namespace FamousQuoteQuiz.Api.Models.Common
 {
+    /// <summary>
+    /// response
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Response<T> : IResponse<T>
     {
         public bool IsSucceded { get; set; }
@@ -25,6 +29,29 @@ namespace FamousQuoteQuiz.Api.Models.Common
             Data = data;
             ValidationMessage = validationMessage;
             ErrorMessage = errorMessage;
+        }
+
+        /// <summary>
+        /// override equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            var objResponse = (Response<T>)obj;
+            return IsSucceded == objResponse.IsSucceded
+                && ((Data == null && objResponse.Data == null)
+                    || (Data != null && objResponse.Data != null
+                        && Data.Equals(objResponse.Data)));
+        }
+
+        /// <summary>
+        /// get hash code
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

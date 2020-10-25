@@ -9,3 +9,4 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.csproj.CopyComplete
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Data.Entity\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Data.Entity.csproj.CoreCompileInputs.cache

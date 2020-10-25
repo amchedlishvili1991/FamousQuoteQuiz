@@ -86,7 +86,7 @@ namespace FamousQuoteQuiz.Application
                 throw new FqqException(FqqExceptionCode.UserNameExists, false);
             }
 
-            var dbUser = new User
+            var dbUser = new Data.RepositoryModels.User
             {
                 UserName = userModel.UserName,
                 RoleId = (int)userModel.Role,
@@ -241,7 +241,7 @@ namespace FamousQuoteQuiz.Application
                     }
                 }
 
-                var dbModel = new UserAnsweredQuote
+                var dbModel = new Data.RepositoryModels.UserAnsweredQuote
                 {
                     UserId = userQuiz.UserId,
                     QuoteId = userQuiz.QuoteId,

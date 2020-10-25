@@ -51,24 +51,26 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             DbSet = DbContext.Set<T1>();
         }
 
-        public void Add(T1 entity)
+        public void Add(T2 entity)
         {
-            DbSet.Add(entity);
+            DbSet.Add(mapperToEntity.Map<T2, T1>(entity));
         }
 
-        public async Task AddAsync(T1 entity)
+        public async Task AddAsync(T2 entity)
         {
-            await DbSet.AddAsync(entity);
+            await DbSet.AddAsync(mapperToEntity.Map<T2, T1>(entity));
         }
 
-        public void AddRange(T1[] entity)
+        public void AddRange(T2[] entity)
         {
-            DbSet.AddRange(entity);
+            var dbEntities = entity.Select(x => mapperToEntity.Map<T2, T1>(x));
+            DbSet.AddRange(dbEntities);
         }
 
-        public async Task AddRangeAsync(T1[] entity)
+        public async Task AddRangeAsync(T2[] entity)
         {
-            await DbSet.AddRangeAsync(entity);
+            var dbEntities = entity.Select(x => mapperToEntity.Map<T2, T1>(x));
+            await DbSet.AddRangeAsync(dbEntities);
         }
 
         public bool Any()
@@ -81,14 +83,14 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return await DbSet.AnyAsync();
         }
 
-        public bool Any(Expression<Func<T1, bool>> predicate)
+        public bool Any(Expression<Func<T2, bool>> predicate)
         {
-            return DbSet.Any(predicate);
+            return DbSet.Any(ExpressionMapper(predicate));
         }
 
-        public async Task<bool> AnyAsync(Expression<Func<T1, bool>> predicate)
+        public async Task<bool> AnyAsync(Expression<Func<T2, bool>> predicate)
         {
-            return await DbSet.AnyAsync(predicate);
+            return await DbSet.AnyAsync(ExpressionMapper(predicate));
         }
 
         public int Count()
@@ -101,14 +103,14 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return await DbSet.CountAsync();
         }
 
-        public int Count(Expression<Func<T1, bool>> predicate)
+        public int Count(Expression<Func<T2, bool>> predicate)
         {
-            return DbSet.Count(predicate);
+            return DbSet.Count(ExpressionMapper(predicate));
         }
 
-        public async Task<int> CountAsync(Expression<Func<T1, bool>> predicate)
+        public async Task<int> CountAsync(Expression<Func<T2, bool>> predicate)
         {
-            return await DbSet.CountAsync(predicate);
+            return await DbSet.CountAsync(ExpressionMapper(predicate));
         }
 
 
@@ -118,9 +120,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public T2 FirstOrDefault(Expression<Func<T1, bool>> predicate)
+        public T2 FirstOrDefault(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(DbSet.FirstOrDefault(predicate));
+            var result = mapperToRepo.Map<T1, T2>(DbSet.FirstOrDefault(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -130,9 +132,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public async Task<T2> FirstOrDefaultAsync(Expression<Func<T1, bool>> predicate)
+        public async Task<T2> FirstOrDefaultAsync(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(await DbSet.FirstOrDefaultAsync(predicate));
+            var result = mapperToRepo.Map<T1, T2>(await DbSet.FirstOrDefaultAsync(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -143,9 +145,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public T2 First(Expression<Func<T1, bool>> predicate)
+        public T2 First(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(DbSet.First(predicate));
+            var result = mapperToRepo.Map<T1, T2>(DbSet.First(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -155,9 +157,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public async Task<T2> FirstAsync(Expression<Func<T1, bool>> predicate)
+        public async Task<T2> FirstAsync(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(await DbSet.FirstAsync(predicate));
+            var result = mapperToRepo.Map<T1, T2>(await DbSet.FirstAsync(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -168,9 +170,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public T2 SingleOrDefault(Expression<Func<T1, bool>> predicate)
+        public T2 SingleOrDefault(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(DbSet.SingleOrDefault(predicate));
+            var result = mapperToRepo.Map<T1, T2>(DbSet.SingleOrDefault(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -180,9 +182,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public async Task<T2> SingleOrDefaultAsync(Expression<Func<T1, bool>> predicate)
+        public async Task<T2> SingleOrDefaultAsync(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(await DbSet.SingleOrDefaultAsync(predicate));
+            var result = mapperToRepo.Map<T1, T2>(await DbSet.SingleOrDefaultAsync(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -193,9 +195,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public T2 Single(Expression<Func<T1, bool>> predicate)
+        public T2 Single(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(DbSet.Single(predicate));
+            var result = mapperToRepo.Map<T1, T2>(DbSet.Single(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -205,9 +207,9 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             return result;
         }
 
-        public async Task<T2> SingleAsync(Expression<Func<T1, bool>> predicate)
+        public async Task<T2> SingleAsync(Expression<Func<T2, bool>> predicate)
         {
-            var result = mapperToRepo.Map<T1, T2>(await DbSet.SingleAsync(predicate));
+            var result = mapperToRepo.Map<T1, T2>(await DbSet.SingleAsync(ExpressionMapper(predicate)));
             return result;
         }
 
@@ -226,14 +228,14 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
             DbSet.Remove(entity);
         }
 
-        public void Remove(T1 entity)
+        public void Remove(T2 entity)
         {
-            DbSet.Remove(entity);
+            DbSet.Remove(mapperToEntity.Map<T2, T1>(entity));
         }
 
-        public IQueryable<T2> Where(Expression<Func<T1, bool>> predicate)
+        public IQueryable<T2> Where(Expression<Func<T2, bool>> predicate)
         {
-            return DbSet.Where(predicate).ProjectTo<T2>(entityToRepo);
+            return DbSet.Where(ExpressionMapper(predicate)).ProjectTo<T2>(entityToRepo);
         }
 
         public List<T2> ToList(IQueryable<T1> queryable)
@@ -287,6 +289,11 @@ namespace FamousQuoteQuiz.Data.Entity.Repositories
         public async Task SaveChangesAsync()
         {
             await DbContext.SaveChangesAsync();
+        }
+
+        private Expression<Func<T1, bool>> ExpressionMapper(Expression<Func<T2, bool>> expression)
+        {
+            return mapperToEntity.Map<Expression<Func<T1, bool>>>(expression);
         }
     }
 }

@@ -11,3 +11,4 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netc
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.csproj.CopyComplete
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Domain\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.csproj.CoreCompileInputs.cache

@@ -198,7 +198,6 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcore
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
@@ -293,3 +292,5 @@ C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcore
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.dll
 C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\bin\Debug\netcoreapp3.1\FamousQuoteQuiz.Application.pdb
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.csproj.CoreCompileInputs.cache
+C:\Users\Achi\source\repos\FamousQuoteQuiz\FamousQuoteQuiz.Api\obj\Debug\netcoreapp3.1\FamousQuoteQuiz.Api.genruntimeconfig.cache

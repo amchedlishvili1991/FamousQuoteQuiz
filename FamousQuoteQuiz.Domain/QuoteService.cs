@@ -62,7 +62,7 @@ namespace FamousQuoteQuiz.Application
         /// <returns></returns>
         public async Task CreateQuote(Data.ServiceModels.Quote quoteModel)
         {
-            var dbQuote = new Quote
+            var dbQuote = new Data.RepositoryModels.Quote
             {
                 Text = quoteModel.Text,
                 Mode = (byte)quoteModel.Mode,
@@ -74,7 +74,7 @@ namespace FamousQuoteQuiz.Application
 
             if (quoteModel.Mode == QuoteMode.Multy)
             {
-                var dbquoteAnswer = quoteModel.Answers.Select(x => new QuoteAnswer
+                var dbquoteAnswer = quoteModel.Answers.Select(x => new Data.RepositoryModels.QuoteAnswer
                 {
                     QuoteId = dbQuote.Id,
                     Text = x.Text,
@@ -117,7 +117,7 @@ namespace FamousQuoteQuiz.Application
 
                 if (quoteModel.Answers?.Any() == true)
                 {
-                    var dbquoteAnswer = quoteModel.Answers.Select(x => new QuoteAnswer
+                    var dbquoteAnswer = quoteModel.Answers.Select(x => new Data.RepositoryModels.QuoteAnswer
                     {
                         QuoteId = quoteModel.Id,
                         Text = x.Text,
